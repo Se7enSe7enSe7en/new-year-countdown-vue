@@ -1,0 +1,4 @@
+- The application displays the days, hours, minutes, and seconds
+- The application counts down to January 1st in real time (by the second)
+- The application transitions the numbers smoothly
+- The `CountdownSegment` component accepts a `number` prop
