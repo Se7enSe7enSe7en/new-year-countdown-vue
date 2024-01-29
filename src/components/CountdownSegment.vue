@@ -7,7 +7,9 @@ defineProps({
 <template>
   <div class="segment">
     <div class="number-wrapper">
-      <span class="number">{{ number }}</span>
+      <Transition>
+        <span :key="number" class="number">{{ number }}</span>
+      </Transition>
     </div>
     <span class="block pt-2 label">{{ label }}</span>
   </div>
@@ -27,6 +29,7 @@ defineProps({
 .label {
   font-size: 16px;
 }
+
 .v-enter-active,
 .v-leave-active {
   transition: all 0.5s ease;
@@ -40,9 +43,5 @@ defineProps({
 .v-enter-to,
 .v-leave-from {
   transform: translateY(0px) translateX(-50%);
-}
-.v-enter-from,
-.v-leave-to {
-  /* opacity: 0; */
 }
 </style>
